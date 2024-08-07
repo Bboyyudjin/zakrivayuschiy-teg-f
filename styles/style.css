@@ -16,14 +16,14 @@
 
 .page {
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
-  font-variation-settings: var(--text-weight);
+  font-weight: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
   background-size: cover;
-  font-weight: var(--text-weight);
 }
 
 .header {
@@ -144,7 +144,7 @@
 
 .article-title {
   font-size: 18px;
-  font-weight: var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight);
   border: 2px solid var(--accent-color);
   padding: 5px 24px 5px 10px;
 }
@@ -192,7 +192,7 @@
 }
 
 .far-way {
-  filter: brightness(200%);
+  filter: brightness(200%) saturate(60%) hue-rotate(90deg);
 }
 
 
