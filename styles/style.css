@@ -27,7 +27,7 @@
 }
 
 .header {
-  height: clamp(20.438rem, 19.535rem + 3.85vw, 23rem);
+  min-height: 327px;
   width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   min-width: 325px;
   display: flex;
@@ -41,24 +41,23 @@
 }
 
 .title {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   text-transform: uppercase;
-  margin-top: clamp(5.625rem, 5.207rem + 1.784vw, 6.813rem);
+  margin-top: clamp(5.938rem, 5.585rem + 1.503vw, 6.938rem);
 }
 
 .title-text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   padding: 20px;
   text-transform: uppercase;
 }
 
 .header__theme-menu {
-  height: 70px;
   width: 84px;
   padding-inline-start: 9px;
-  padding-block-start: 3px;
+  padding-block-start: 4px;
 }
 
 .theme-menu__list {
@@ -68,7 +67,7 @@
 }
 
 .theme-menu__button {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   padding: 0;
   border: none;
   position: relative;
@@ -199,7 +198,7 @@
 .decoration {
   position: absolute;
   display: block;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: 14px;
   right: clamp(0.688rem, 0.379rem + 1.315vw, 1.563rem);
   top: clamp(1.313rem, 1.224rem + 0.376vw, 1.563rem);
@@ -250,6 +249,7 @@
   outline: 2px solid transparent;
   border: none;
   transition: outline 0.3s ease;
+  cursor: pointer;
 
   &:focus-visible {
     outline: 2px solid var(--accent-color);
@@ -278,7 +278,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: 14px;
   mix-blend-mode: difference;
   color: var(--color-for-difference);
@@ -355,7 +355,6 @@
   flex-direction: column;
   gap: 30px;
   width: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
-  height: 191px;
   border: 2px solid var(--accent-color);
   padding: 30px;
   background-color: var(--background-color);
@@ -380,10 +379,10 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: var(--accent-color);
-  width: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
+  max-width: clamp(12.375rem, 11.583rem + 3.38vw, 14.625rem);
   line-height: 21px;
 }
 
@@ -395,9 +394,12 @@
 
 @media (width <= 376px) {
 
+  .header {
+    padding: 25px 25px 22px;
+  }
+
   .header__theme-menu {
     padding-inline-start: 10px;
-    padding-block-start: 4px;
   }
 
   .discription-first-article {
